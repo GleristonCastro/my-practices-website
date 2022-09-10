@@ -1,0 +1,85 @@
+@use 'variables'
+.dark
+    background-color: variables.$dt-body-bg
+
+    a 
+        text-decoration: none
+        color: variables.$dt-a-link-color
+    
+    code, pre 
+        background: variables.$dt-bg-code-pre-color
+    
+    .navbar, .showcase, .stats, .cli, .cloud, .languages, .footer
+        color: variables.$dt-text-color
+        background: variables.$dt-body-bg
+    
+    .navbar 
+        background-color: variables.$dt-primary-color
+
+    .showcase
+        background-color: variables.$dt-primary-color
+
+        &::before, &::after 
+            background: variables.$dt-primary-color
+
+    .showcase-form 
+        input[type='text'], input[type='email']
+            border-bottom: 1px solid #fff
+
+    .showcase-text
+    
+    .card 
+        background-color: variables.$dt-bg-code-pre-color
+        color: variables.$dt-text-color
+    
+    .btn 
+        background: variables.$dt-secondary-color
+    
+    .bg-primary, .btn-primary 
+        background-color: variables.$dt-secondary-color
+        color: #fff
+
+    .bg-secondary, .btn-secondary 
+        background-color: variables.$dt-secondary-color
+        color: #fff
+
+    .bg-dark, .btn-dark 
+        background-color: variables.$dt-dark-color
+        color: #fff
+
+    .bg-light, .btn-light 
+        background-color: variables.$dt-dark-color
+        color: #fff
+    
+    .bg-primary a, .btn-primary a, .bg-secondary a, .btn-secondary a, .bg-dark a, .btn-dark a 
+        color: #fff
+    
+    /* Text colors */
+    .text-primary 
+        color: #fff
+
+    .text-secondary 
+        color: variables.$dt-secondary-color
+
+    .text-dark 
+        color: variables.$dt-dark-color
+
+    .text-light 
+        color: variables.$dt-light-color
+    
+    .alert 
+        background-color: variables.$dt-light-color
+    
+    .alert-success 
+        background-color: variables.$dt-success-color
+        color: #fff
+
+    .alert-error 
+        background-color: variables.$dt-error-color
+        color: #fff
+    
+    .fa-sun, .themelighttext
+        display: block
+
+    .fa-moon, .themedarktext
+        display: none

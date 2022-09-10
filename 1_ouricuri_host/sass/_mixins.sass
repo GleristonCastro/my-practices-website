@@ -1,0 +1,35 @@
+@use 'variables'
+
+@mixin clear
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+
+@mixin showcaseefect
+    content: ''
+    position: absolute
+    height: 130px
+    bottom: -60px
+    right: 0
+    left: 0
+    background: #fff
+    -webkit-transform: skewY(-3deg)
+    -moz-transform: skewY(-3deg)
+    -ms-transform: skewY(-3deg)
+    transform: skewY(-3deg)
+
+@mixin form-control-input
+    border: 0
+    border-bottom: 1px solid #b4becb
+    width: 100%
+    padding: 10px
+    font-size: 16px
+    border-radius: 3px
+
+@mixin features-docs-img
+    width: 200px
+    justify-self: flex-end
+
+@mixin color-change-theme
+    color: variables.$lt-text-color
+    background: variables.$lt-body-bg
