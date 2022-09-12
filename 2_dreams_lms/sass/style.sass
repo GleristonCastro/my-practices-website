@@ -1,0 +1,497 @@
+@use 'variables'
+@use 'dark'
+@use 'importStyles'
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Montserrat', sans-serif
+    list-style: none
+    text-decoration: none
+    scroll-behavior: smooth
+
+body
+    background: variables.$bg-color
+    color: variables.$text-color
+
+header
+    position: fixed
+    width: 100%
+    top: 0
+    right: 0
+    z-index: 1000
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background: transparent
+    padding: 23px 13%
+    transition: all .40s ease
+
+.logo
+    img
+        height: auto
+        width: 160px
+        max-width: 100%
+
+.navbar
+    display: flex
+
+    a
+        color: variables.$text-color
+        font-weight: 600
+        font-size: variables.$p-color
+        padding: 10px 22px
+        transition: all .40s ease
+
+        &:hover
+            color: variables.$main-color
+
+.header-icons
+    display: flex
+    align-items: center
+
+    i
+        margin-left: 10px
+        font-size: 24px
+        color: variables.$text-color
+        transition: all .40s ease
+        margin-right: 15px
+
+        &:hover
+            transform: scale(1.2)
+            color: variables.$main-color
+
+#menu-icon
+    font-size: 34px
+    color: variables.$text-color
+    z-index: 10001
+    cursor: pointer
+    display: none
+
+section
+    padding: 80px 13%
+
+.home
+    position: relative
+    height: 100vh
+    width: 100%
+    background: url(../img/background.png)
+    background-size: cover
+    background-position: center
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 1rem
+    align-items: center
+
+.home-text
+    h1
+        font-size: variables.$big-font
+        margin: 15px 0 15px
+
+    h6
+        color: variables.$main-color
+        font-size: 18px
+        font-weight: 600
+        letter-spacing: 2px
+
+    p
+        color: variables.$second-color
+        font-size: variables.$p-color
+        font-weight: 500
+        margin-bottom: 48px
+
+.latter
+    form
+        width: 100%
+        max-width: 460px
+        position: relative
+
+        input
+            &:first-child
+                display: inline-block
+                width: 100%
+                outline: none
+                padding: 16px 140px 16px 15px
+                border: 2px solid variables.$main-color
+                border-radius: 30px
+
+            &:last-child
+                position: absolute
+                display: inline-block
+                border: none
+                outline: none
+                background: variables.$main-color
+                color: variables.$bg-color
+                padding: 16px 40px
+                border-radius: 30px
+                cursor: pointer
+                top: 2px
+                right: 1px
+
+.home-img
+    img
+        height: auto
+        width: 100%
+
+
+header.sticky
+    background: variables.$bg-color
+    padding: 12px 13%
+    box-shadow: 0px 4px 15px rgb(0 0 0 / 8%)
+
+
+.container
+    padding: 70px 13%
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto))
+    gap: 1.5rem
+    align-items: center
+    cursor: pointer
+
+.container-box
+    display: flex
+    align-items: center
+    gap: 1.8rem
+    border: 1px solid #e9ecef
+    border-radius: 20px
+    padding: 20px 30px
+    box-shadow: -11.729px -11.729px 32px rgb(255 255 255 / 15%)
+    transition: all .40s ease
+
+    &:hover
+        transform: translateY(-15px)
+
+.container-text
+    h4
+        font-size: 20px
+        font-weight: 700
+        margin-bottom: 4px
+
+    p
+        font-size: variables.$p-color
+        color: variables.$second-color
+        font-weight: 500
+
+.center-text
+    text-align: center
+
+    h5
+        color: variables.$main-color
+        font-size: 16px
+        font-weight: 600
+        letter-spacing: 1px
+        margin-bottom: 20px
+
+    h2
+        font-size: variables.$h2-font
+        line-height: 1.2
+
+.categories-content
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto))
+    gap: 1.5rem
+    align-items: center
+    cursor: pointer
+    text-align: center
+    margin-top: 4rem
+
+.box
+    padding: 25px 60px
+    border: 1px solid #e9ecef
+    border-radius: 20px
+    box-shadow: -11.729px -11.729px 32px rgb(255 255 255 / 15%)
+    transition: all .40s ease
+
+    &:hover
+        transform: translateY(-15px)
+
+    img
+        height: auto
+        width: 110px
+        margin-bottom: 20px
+
+    h3
+        font-size: 20px
+        font-weight: 700
+        margin-bottom: 30px
+        line-height: 1.3
+        transition: all .40s ease
+
+        &:hover
+            color: variables.$main-color
+
+    p
+        font-size: variables.$p-color
+        color: variables.$second-color
+        font-weight: 500
+
+.main-btn
+    text-align: center
+    margin-top: 5rem
+
+.btn
+    display: inline-block
+    padding: 16px 30px
+    font-size: variables.$p-font
+    font-weight: 700
+    background: variables.$main-color
+    color: variables.$bg-color
+    border-radius: 30px
+    transition: all .40s ease
+
+    &:hover
+        transform: scale(0.9) translateY(-5px)
+
+
+.courses
+    background: url(../img/coursebg.png)
+    background-size: cover
+    background-position: center
+
+
+.courses-content
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto))
+    gap: 2rem
+    align-items: center
+    margin-top: 4rem
+    cursor: pointer
+    border-radius: 15px
+
+.row
+    background: variables.$bg-color
+    padding: 0px 0px 10px 0px
+    border-radius: 20px
+    box-shadow: 0px 5px 40px rgb(19 8 73 / 13%)
+    transition: all .40s ease
+
+    &:hover
+        transform: translateY(-15px)
+
+    img
+        width: 100%
+        height: 320px
+        object-fit: cover
+        border-radius: 15px 15px 0px 0px
+
+.courses-text
+    padding: 35px 20px
+
+    h3
+        font-size: 24px
+        font-weight: 700
+        line-height: 34px
+        margin: 15px 0 15px
+        transition: all .40s ease
+
+    h5
+        color: variables.$main-color
+        font-size: 18px
+        font-weight: 700
+
+    &:hover
+        color: variables.$main-color
+
+    h6
+        color: #696969
+        font-size: variables.$p-color
+        font-weight: 400
+        line-height: 30px
+        letter-spacing: 1px
+        margin-bottom: 30px
+
+.rating
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    justify-content: space-between
+
+.star
+    i
+        color: variables.$main-color
+        margin-right: 2px
+        font-size: 17px
+
+.review
+    p
+        color: #696969
+        font-size: variables.$p-color
+        font-weight: 400
+        letter-spacing: 1px
+
+
+.cta-content
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(170px, auto))
+    gap: 2rem
+    align-items: center
+    text-align: center
+    margin-top: 5rem
+
+
+.about
+    background: url(../img/aboutbg.png)
+    background-size: cover
+    background-position: center
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 2rem
+    align-items: center
+
+
+.about-img
+    img
+        width: 100%
+        height: auto
+
+.about-text
+    h2
+        font-size: variables.$h2-font
+        line-height: 1.2
+        margin-bottom: 20px
+
+    h4
+        font-size: 20px
+        margin-bottom: 10px
+
+    h5
+        font-size: 20px
+        margin-bottom: 40px
+
+    p
+        font-size: variables.$p-color
+        color: variables.$second-color
+        font-weight: 500
+        line-height: 30px
+        margin-bottom: 30px
+
+.contact
+    padding: 60px 13%
+    background: variables.$bg-color
+
+.main-contact
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto))
+    gap: 2rem
+
+.contact-content
+    img
+        height: auto
+        width: 160px
+        max-width: 100%
+        margin-bottom: 30px
+
+    li
+        margin-bottom: 18px
+
+        a
+            display: block
+            color: variables.$text-color
+            font-weight: 500
+            font-size: 15px
+            transition: all .40s ease
+
+            &:hover
+                transform: translateX(10px)
+                color: variables.$main-color
+
+.last-text
+    p
+        text-align: center
+        padding: 18px
+        color: variables.$second-color
+        font-size: 15px
+        font-weight: 500
+        letter-spacing: 1px
+
+
+@media (max-width: 1410px)
+    header
+        padding: 10px 3%
+        transition: .2s
+	
+    header.sticky
+        padding: 12px 3%
+        transition: .2s
+	
+    section
+        padding: 70px 3%
+        transition: .2s
+	
+    .container
+        padding: 70px 3%
+        transition: .2s
+
+    .contact
+        padding: 60px 3%
+        transition: .2s
+
+@media (max-width: 1050px)
+
+    .home
+        height: 84vh
+	
+@media (max-width: 1025px)
+    #menu-icon
+        display: block
+
+    .navbar
+        position: absolute
+        top: 100%
+        right: -100%
+        width: 300px
+        height: 110vh
+        background: variables.$main-color
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 170px 30px
+        transition: all .40s ease
+
+        a
+            display: block
+            margin: 1.3rem 0
+            color: variables.$bg-color
+
+            &:hover
+                color: variables.$bg-color
+                transform: translateY(-5px)
+
+    .navbar.open
+        right: 0
+
+@media (max-width: 890px)
+    .home
+        height: 150vh
+        grid-template-columns: 1fr
+        gap: 1rem
+
+    .home-text
+        padding-top: 20px
+
+    .home-img
+        text-align: center
+
+    .home-img img
+        height: auto
+        width: 100%
+
+    .about
+        grid-template-columns: 1fr
+        gap: 1rem
+
+@media (max-width: 600px)
+    .home
+        height: 120vh
+
+#change-theme
+    display: none
+
+.bx
+    font-size: 1.3rem
+    cursor: pointer
+
+.bx-sun
+    display: none
+    cursor: pointer

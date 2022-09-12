@@ -1,0 +1,131 @@
+@use 'variables'
+.darkT
+    background: variables.$dt-bg-color
+    color: variables.$dt-text-color
+
+    a
+        color: variables.$dt-text-color
+
+        &:hover
+            color: variables.$dt-main-color
+
+    .bx-sun, .themelighttext
+        display: block
+
+    .bx-moon, .themedarktext
+        display: none
+
+    .navbar
+        a
+            color: variables.$dt-text-color
+    
+    .header-icons
+        i
+            color: variables.$dt-text-color
+
+            &:hover
+                color: variables.$dt-main-color
+
+    #menu-icon
+        color: variables.$dt-text-color
+    
+    .home
+        background: rgb(0,0,4)
+        background: linear-gradient(354deg, rgba(0,0,4,1) 0%, rgba(44,44,48,1) 35%, rgba(40,42,50,1) 65%, rgba(15,17,18,1) 100%)
+    
+    .home-text
+
+        h6
+            color: variables.$dt-main-color
+
+        p
+            color: variables.$dt-second-color
+            font-size: variables.$dt-p-color
+
+    .latter
+        form
+            input
+                &:first-child
+                    border: 2px solid variables.$dt-main-color
+
+                &:last-child
+                    background: variables.$dt-main-color
+                    color: variables.$dt-bg-color
+    
+    header.sticky
+        background: variables.$dt-bg-color
+    
+    .container-text
+        p
+            font-size: variables.$dt-p-color
+            color: variables.$dt-second-color
+
+    .center-text
+        h5
+            color: variables.$dt-main-color
+
+    .box
+        p
+            color: variables.$dt-second-color
+    
+    .btn
+        background: variables.$dt-main-color
+        color: variables.$dt-bg-color
+
+        &:hover
+            color: variables.$dt-bg-color
+
+    .row
+        background: variables.$dt-bg-color
+
+    .courses
+        background: rgb(0,0,4)
+        background: linear-gradient(169deg, rgba(0,0,4,1) 0%, rgba(44,44,48,1) 35%, rgba(40,42,50,1) 65%, rgba(15,17,18,1) 100%)
+    
+    .courses-text
+        h5
+          color: variables.$dt-main-color
+
+        &:hover
+            color: variables.$dt-main-color
+        
+        h6
+            font-size: variables.$dt-p-color
+    
+    .star
+        i
+            color: variables.$dt-main-color
+    
+    .about
+        background: rgb(0,0,4)
+        background: linear-gradient(169deg, rgba(0,0,4,1) 0%, rgba(71,71,83,1) 35%, rgba(58,62,74,1) 65%, rgba(15,17,18,1) 100%)
+    
+    .about-text
+        p
+            color: variables.$dt-second-color
+    
+    .contact
+        background: variables.$dt-bg-color
+    
+    .contact-content
+        li
+            a
+                color: variables.$dt-text-color
+
+                &:hover
+                    color: variables.$dt-main-color
+    
+    .last-text
+        p
+            color: variables.$dt-second-color
+
+    
+    @media (max-width: 1025px)
+        .navbar
+            background: variables.$dt-main-color
+        
+        a
+            color: variables.$dt-bg-color
+
+            &:hover
+                color: variables.$dt-bg-color
