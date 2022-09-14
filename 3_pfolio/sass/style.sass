@@ -1,0 +1,537 @@
+@use 'variables'
+@use 'mixins'
+@import url(https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css)
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap)
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Poppins', sans-serif
+    list-style: none
+    text-decoration: none
+    scroll-behavior: smooth
+    scroll-padding-top: 3rem
+    
+body
+    background: variables.$bg-color
+    color: variables.$text-color
+
+header
+    position: fixed
+    width: 100%
+    right: 0
+    top: 0
+    z-index: 1000
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background: #000
+    padding: 15px 6%
+
+    .logo
+        font-size: 1.9rem
+        font-weight: 600
+        color: variables.$text-color
+
+        span
+            @include mixins.spanColorMain
+    
+    .navlist
+        display: flex
+
+        li
+            position: relative
+
+            a
+                color: variables.$text-color
+                font-weight: 500
+                font-size: 1rem
+                padding: 10px 20px
+
+                &::after
+                    content: ''
+                    position: absolute
+                    width: 0
+                    height: 2px
+                    background: variables.$main-color
+                    left: 0
+                    bottom: -4px
+                    transition: ease .40s
+                
+                &:hover::after
+                    width: 100%
+    
+    .h-btn
+        a
+            color: variables.$text-color
+            font-weight: 500
+            padding: 8px 26px
+            border: 2px solid transparent
+            transition: ease .40s
+
+        .sign-in
+            color: variables.$text-color
+            background: variables.$main-color
+            border-radius: 30px
+
+            &:hover
+                background: trasparent
+                border: 2px solid variables.$main-color
+
+#menu-icon
+    font-size: 26px
+    color: variables.$text-color
+    cursor: pointer
+    z-index: 10001
+    display: none
+
+.home
+    @include mixins.paddingSection
+    height: 100vh
+    width: 100%
+    background: url(../../assets/img/background.jpg)
+    background-size: cover
+    background-position: center
+    position: relative
+    display: grid
+    grid-template-columns: center
+
+    span
+        @include mixins.spanColorMain
+
+    &-text
+        padding-top: 120px
+
+        h1
+            font-size: variables.$big-font
+            color: variables.$text-color
+            line-height: 1.11
+            font-weight: 800
+            letter-spacing: 1px
+            margin: 0 0 25px
+        
+        h4
+            color: variables.$text-color
+            font-size: 1.5rem
+            line-height: 1.21
+            font-weight: 700
+            margin-bottom: 40px
+
+        .btn
+            @include mixins.btnDefault
+                
+
+    .count
+        display: flex
+        flex-wrap: wrap
+        margin-top: 100px
+
+        li
+            margin-right: 55px
+            font-size: 1rem
+            font-weight: 500
+            color: variables.$text-color
+
+            span
+                color: variables.$text-color
+                font-weight: 700
+                font-size: 1.8rem
+.about
+    @include mixins.paddingSection
+    background: variables.$bg-color
+    display: grid
+    grid-template-columns: repeat(2, 2fr)
+    align-items: center
+    grid-gap: 2rem
+
+    &-img
+        img
+            max-width: 100%
+            width: 490px
+            height: auto
+    
+    &-text
+        h2
+            font-size: variables.$h2-font
+            color: variables.$secound-color
+            font-weight: 700
+            line-height: 1.2
+            margin-bottom: 1.2rem
+        
+        h5
+            color: variables.$secound-color
+            font-size: 1.3rem
+            margin-bottom: 20px
+            letter-spacing: 2px
+        
+        p
+            font-size: variables.$p-font
+            font-weight: 400
+            max-width: 570px
+            line-height: 1.8
+            color: variables.$other-color
+            margin-bottom: 2.5rem
+            text-align: justify
+
+        .btnCV
+            @include mixins.btnDefault
+
+.services
+    @include mixins.paddingSection
+    background: variables.$secound-bg-color
+
+    .heading
+        @include mixins.headingDefault
+
+    &-content
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(370px, auto))
+        grid-gap: 2rem
+        align-items: center
+        margin-top: 4.4rem
+
+        .box
+            background: variables.$bg-color
+            padding: 45px 30px
+            border-radius: 5px
+            cursor: pointer
+            transition: all .35s
+
+            i
+                color: variables.$main-color
+                font-size: 2.8rem
+                margin-bottom: 18px
+
+            h3
+                font-size: 22px
+                font-weight: 600
+                margin-bottom: 15px
+                color: variables.$secound-color
+            
+            p
+                color: variables.$other-color
+                font-size: 16px
+                line-height: 30px
+
+            &:hover
+                box-shadow: 0px 20px 30px rgb(55 7 23 / 7%)
+
+.portfolio
+    @include mixins.paddingSection
+
+    .heading
+        @include mixins.headingDefault
+
+    &-content
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(220px, auto))
+        grid-gap: 2rem
+        align-items: center
+        text-align: center
+        cursor: pointer
+        margin-top: 4.4rem
+    
+        .col
+            position: relative
+
+            img
+                max-width: 100%
+                width: 620px
+                height: auto
+            
+            .layer
+                background: transparent
+                height: 100%
+                width: 100%
+                position: absolute
+                border-radius: 10px
+                top: 0
+                left: 0
+                transition: all .35s
+
+                &:hover
+                    background: linear-gradient(rgba(22,22,22, 0.06) 0%, #9f0036 100%)
+
+                h3
+                    position: absolute
+                    width: 100%
+                    font-size: 1.4rem
+                    font-weight: 500
+                    color: variables.$text-color
+                    bottom: 0
+                    left: 50%
+                    transform: translateX(-50%)
+                    opacity: 0
+                    transition: all 0.35s
+                
+                &:hover
+                    h3
+                        bottom: 49%
+                        opacity: 1
+
+.blog
+    background: variables.$secound-bg-color
+    @include mixins.paddingSection
+
+    .heading
+        @include mixins.headingDefault
+    
+    &-content
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(220px, auto))
+        grid-gap: 2rem
+        align-items: center
+        text-align: center
+        cursor: pointer
+        margin-top: 4.4rem
+
+        .row
+            padding: 0 0 30px 0
+            background: variables.$bg-color
+            border-radius: 10px
+            transition: all .35s
+            text-align: left
+
+            &:hover
+                box-shadow: 0px 20px 30px rgb(55 7 23 / 7%)
+
+            img
+                max-width: 100%
+                width: 600px
+                height: auto
+
+            p
+                font-size: 15px
+                font-weight: 500
+                color: variables.$other-color
+                margin: 10px 0px 8px 25px
+            
+            h3
+                font-size: 22px
+                line-height: 1.45
+                font-weight: 600
+                transition: all .35s
+                margin: 10px 0px 8px 25px
+                color: variables.$secound-color
+
+                &:hover
+                    color: variables.$main-color
+            
+            a
+                font-size: variables.$p-font
+                font-weight: 400
+                line-height: 1.8
+                color: variables.$other-color
+                border-bottom: 2px solid trasparent
+                transition: all .35s
+                margin: 10px 0px 8px 25px
+
+                &:hover
+                    border-bottom: 2px solid variables.$main-color
+                    color: variables.$main-color
+
+.contact
+    @include mixins.paddingSection
+    background: #161616
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    h2
+        color: variables.$text-color
+        font-size: 1.9rem
+    
+    .newsletter
+        background: variables.$bg-color
+        margin-top: 1rem
+        border-radius: 30px
+        padding: 4px 10px
+        max-width: 100%
+        width: 400px
+        display: flex
+        justify-content: space-between
+
+        input
+            border: none
+            outline: none
+            width: 100%
+            padding: 0 5px
+
+        .cta
+            background-color: variables.$main-color
+            color: variables.$text-color
+            padding: 8px 20px
+            border-radius: 30px
+
+.copyright
+    background: variables.$bg-color
+    padding: 20px 30px
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+
+    p
+        font-size: 14px
+        font-weight: 500
+        color: variables.$other-color
+    
+    .icon
+        a
+            display: inline-flex
+            align-content: center
+            align-items: center
+            background: variables.$main-color
+            width: 35px
+            height: 35px
+            margin: 0px 5px
+            color: variables.$text-color
+            font-size: 1.2rem
+            border-radius: 50%
+            transition: all .40s
+            padding: 8px
+
+            &:hover
+                transform: translateY(-5px)
+
+@media (max-width: 1380px)
+    .home
+        padding: 18px 2%
+        transition: .2s
+
+        &-text
+            h1
+                font-size: 6rem
+            h4
+                font-size: 1.2rem
+    
+    section
+        padding: 80px 2%
+        transition: .3s
+
+        .count
+            span
+                font-size: 1.3rem
+
+@media (max-width: 1120px)
+    header
+        padding: 14px 2%
+
+        .navlist
+            position: absolute
+            top: -600px
+            left: 0
+            right: 0
+            display: flex
+            flex-direction: column
+            background: variables.$main-color
+            text-align: left
+            transition: all .35s ease
+
+            a
+                display: block
+                padding: 1rem
+                margin: 1.2rem
+                border-left: 2px solid variables.$text-color
+
+                &:hover
+                    background: variables.$text-color
+                    color: variables.$secound-color
+                    border: none
+                
+                &::after
+                    display: none
+            
+        .active
+            top: 100%
+    
+    .h-btn
+        .sign-up
+            display: none
+
+    #menu-icon
+        display: block
+
+    .home
+
+        h1
+                font-size: 4.5rem
+
+@media (max-width: 770px)
+    .about
+        grid-template-columns: 1fr
+
+        img
+            text-align: center
+            margin-top: 40px
+    .contact 
+        text-align: center
+
+        h2
+            font-size: 1.4rem
+    
+    .copyright
+        justify-content: center
+        text-align: center
+
+        p
+            margin-bottom: 30px
+
+@media (max-width: 750px)
+
+    h1
+        font-size: 3.5rem
+   
+    h2
+        font-size: 1.9rem
+    
+    p
+        font-size: 0.9rem
+
+@media (max-width: 630px)
+    section
+        padding: 90px 4%
+    
+    header
+        padding: 14px 4%
+
+    .home
+        &-text
+            h1
+                font-size: 3rem
+            h4
+                font-size: 1.2rem
+    
+            .count
+                li
+                    font-size: 1rem
+
+                span
+                    font-size: 1rem
+
+@media (max-width: 440px)
+    .home-text
+        .count
+            margin-top: 20px
+    
+    .home
+        .count
+            li
+                span
+                    font-size: 1.5rem
+
+    h2
+        font-size: 2.5rem
+
+    .contact
+        .newsletter
+            input
+                border-radius: 10px
+    
+    .services-content
+        grid-template-columns: repeat(auto-fit, minmax(170px, auto))
+
+@media (max-width: 319px)
+    *
+        display: none
