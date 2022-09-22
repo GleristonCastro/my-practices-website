@@ -2,7 +2,7 @@
 
 Este projeto teve como base o [vídeo](https://www.youtube.com/watch?v=T_dErlMDmdY) do canal [Tahmid Ahmed](https://www.youtube.com/channel/UC6iO-h3n4adFsp3krxznqHg) no Youtube, do tipo "One Page".
 
-[![Preview do projeto](./assets/img/screenshot.png "Clique para acesasr o preview do Projeto")](https://gleristoncastro.com.br/portfolio/github/preview/Websites-Practice/2_dreams_lms/)
+[![Preview do projeto](./assets/img/screenshot.avif "Clique para acesasr o preview do Projeto")](https://gleristoncastro.com.br/portfolio/github/preview/Websites-Practice/2_dreams_lms/)
 
 
 _Para visualizar o preview do projeto clique na imagem acima._
