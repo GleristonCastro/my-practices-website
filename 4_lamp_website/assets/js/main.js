@@ -29,3 +29,18 @@ const scrollHeader = () => {
 }
 
 window.addEventListener('scroll', scrollHeader);
+
+const popularSwiper = new Swiper('.popular__content', {
+  slidesPerView: 'auto',
+  centeredSlides: true,
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    768: {
+      centeredSlides: false,
+    },
+  },
+});
