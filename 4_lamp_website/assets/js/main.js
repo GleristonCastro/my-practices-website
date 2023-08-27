@@ -44,3 +44,32 @@ const popularSwiper = new Swiper('.popular__content', {
     },
   },
 });
+
+const faqItem = document.querySelectorAll('.choose__faq-item');
+
+faqItem.forEach((item) => {
+  const faqHeader = item.querySelector('.choose__faq-header');
+
+  faqHeader.addEventListener('click', () => {
+
+    const openItem = document.querySelector('.faq-open');
+
+    toggleItem(item);
+
+    if(openItem && openItem != item) {
+      toggleItem(openItem)
+    }
+  })
+});
+
+const toggleItem = (item) => {
+  const faqContent = item.querySelector('.choose__faq-content');
+
+  if(item.classList.contains('faq-open')){
+    faqContent.removeAttribute('style');
+    item.classList.remove('faq-open');
+  } else {
+    faqContent.style.height = faqContent.scrollHeight + 'px';
+    item.classList.add('faq-open');
+  }
+};
