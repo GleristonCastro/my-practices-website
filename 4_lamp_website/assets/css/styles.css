@@ -219,6 +219,13 @@ img {
   color: var(--title-color);
 }
 
+.active-link {
+  background: var(--third-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .home {
   position: relative;
 }
