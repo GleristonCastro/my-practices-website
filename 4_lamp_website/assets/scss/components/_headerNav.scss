@@ -91,3 +91,10 @@
 .bg-header :is(.nav__logo, .nav__toggle){
   color: var(--title-color);
 }
+
+.active-link {
+  background: var(--third-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
