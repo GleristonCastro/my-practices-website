@@ -46,39 +46,15 @@ img {
   height: auto;
 }
 
-/*=============== THEME ===============*/
-
-
-/*========== Variables Dark theme ==========*/
-
-
-/*========== 
-	Color changes in some parts of 
-	the website, in dark theme
-==========*/
-
-
-/*=============== REUSABLE CSS CLASSES ===============*/
-.container {
-  max-width: 1120px;
-  margin-inline: 1.5rem;
+.nav__buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
 }
 
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.section {
-  padding-block: 5rem 1rem;
-}
-
-.section__title {
-  font-size: var(--big-font-size);
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.main {
-  overflow: hidden;
+.change-theme {
+  font-size: 1.25rem;
+  color: var(--white-color);
+  transition: color .4s;
+  cursor: pointer;
 }
