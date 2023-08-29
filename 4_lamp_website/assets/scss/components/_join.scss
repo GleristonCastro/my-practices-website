@@ -7,6 +7,7 @@
     row-gap: 0;
     background-color: var(--container-color);
     padding: 0 1.5rem 3.5rem 1.5rem;
+    transition: background .4s;
   }
 
   &__blob {
@@ -75,6 +76,7 @@
     padding: 1.25rem 1.5rem;
     border-radius: 4rem;
     color: var(--text-color);
+    transition: background .4s;
 
     &::placeholder {
       font-family: var(--second-font);
