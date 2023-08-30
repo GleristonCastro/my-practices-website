@@ -125,3 +125,16 @@ themeButton.addEventListener('click', () => {
   localStorage.setItem('selected-theme', getCurrentTheme());
   localStorage.setItem('selected-icon', getCurrentIcon());
 });
+
+const sr = ScrollReveal ({
+  origin: 'top',
+  distance: '60px',
+  duration: 2500,
+  delay: 400,
+  reset: true
+})
+
+sr.reveal(`.home__content, .popular__container, .products__container, .join__bg, .footer__container`);
+sr.reveal(`.home__image`, {origin: 'bottom'});
+sr.reveal(`.choose__image, .features__image`, {origin: 'left'});
+sr.reveal(`.choose__content, .features__content`, {origin: 'right'});
